@@ -1,0 +1,38 @@
+{
+  "name": "Let's Encrypt",
+  "version": "2.2",
+  "slug": "letsencrypt_route53",
+  "description": "Manage certificate from Let's Encrypt with route53 dns challange",
+  "url": "https://home-assistant.io/addons/lets_encrypt/",
+  "startup": "once",
+  "boot": "manual",
+  "ports": {
+    "80/tcp": 80
+   },
+  "map": ["ssl:rw"],
+  "options": {
+    "email": null,
+    "domains": [null],
+    "staging": false,
+    "challenge": "http",
+    "certfile": "fullchain.pem",
+    "keyfile": "privkey.pem",
+    "aws": {
+      "aws_access_key_id" : "",
+      "aws_secret_access_key": ""
+    }
+  },
+  "schema": {
+    "email": "email",
+    "domains": ["str"],
+    "staging": "bool",
+    "challenge": "match(^(http|dns)$)",
+    "certfile": "str",
+    "keyfile": "str",
+    "aws": {
+      "aws_access_key_id" : "str?",
+      "aws_secret_access_key": "str?"
+    }
+  },
+  "image": "gpiper/{arch}-addon-letsencrypt_route53"
+}
