@@ -1,0 +1,25 @@
+{
+  "name": "Let's Encrypt Route53 via Terraform",
+  "version": "1.0",
+  "slug": "acme_terraform",
+  "description": "use terraform to issue acme certs",
+  "url": "https://github.com/gpiper14/hassio-addons",
+  "startup": "once",
+  "boot": "manual",
+  "map": ["ssl:rw"],
+  "options": {
+    "email": null,
+    "domains": [null],
+    "staging": false,
+    "aws_access_key_id" : "",
+    "aws_secret_access_key": ""
+  },
+  "schema": {
+    "email": "email",
+    "domains": ["str"],
+    "staging": "bool",
+    "aws_access_key_id" : "str",
+    "aws_secret_access_key": "str"
+  },
+  "image": "gpiper/{arch}-acme_terraform"
+}
