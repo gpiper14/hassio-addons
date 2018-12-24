@@ -5,7 +5,6 @@
   "description": "use terraform to issue acme certs",
   "url": "https://github.com/gpiper14/hassio-addons",
   "startup": "once",
-  "arch": ["armhf"],
   "boot": "manual",
   "map": ["ssl:rw"],
   "options": {
