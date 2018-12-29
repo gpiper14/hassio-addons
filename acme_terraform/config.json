@@ -9,13 +9,15 @@
   "map": ["ssl:rw"],
   "options": {
     "email": null,
+    "common_name": null,
     "domains": [null],
-    "staging": false,
+    "staging": true,
     "aws_access_key_id" : "",
     "aws_secret_access_key": ""
   },
   "schema": {
     "email": "email",
+    "common_name": "str",
     "domains": ["str"],
     "staging": "bool",
     "aws_access_key_id" : "str",
